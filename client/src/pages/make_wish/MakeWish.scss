@@ -1,0 +1,141 @@
+@import '../../Colors';
+
+.makeWish {
+    background: $color-bg;
+    border-radius: 12px;
+    padding: 32px 24px;
+    border: solid 4px white;
+    box-shadow: 0 0 34px 4px #0e429c42;
+
+    &-imgstring {
+        display: none;
+    }
+
+    &_mainProps {
+        height: 124px;
+        display: flex;
+
+        &-image {
+            height: 100%;
+            width: 124px;
+            background-color: white;
+            background-image: url(../../Assets/Images/presentPlaceholder.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 1px 1px 3px 0px #0000000a;
+            background-color: $color-main;
+
+            img {
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                left: calc(50% + 4px);
+                top: 50%;
+                position: absolute;
+                width: auto;
+                height: 64px;
+            }
+
+            input {
+                cursor: pointer;
+                opacity: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            &:hover {
+                background-blend-mode: multiply;
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-input {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--error {
+                color: red !important;
+            }
+
+            &>div {
+                width: 100%;
+                padding: 0 32px;
+                height: max-content;
+                transform: translateY(-16px);
+                p {
+                    color: $color-light;
+                    margin: 8px 4px;
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+                input {
+                    width: calc(100% + 4px);
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    font-size: 18px;
+                    color: $color-main;
+                    box-shadow: 1px 1px 3px 0px #0000000a;
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0px 0px 0px 1px #0f9cd8ab, 1px 1px 4px 0px #0000000a;
+                    }
+                }
+            }
+        }
+    }
+    &_details {
+        textarea {
+            resize: none;
+            width: calc(100% - 18px);
+            height: 124px;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 1px 1px 3px 0px #0000000a;
+            &:focus {
+                outline: none;
+                box-shadow: 0px 0px 0px 1px #0f9cd8ab, 1px 1px 4px 0px #0000000a;
+            }
+        }
+    }
+    &_links {
+        input {
+            width: calc(100% - 18px);
+            margin: 4px 0;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 1px 1px 3px 0px #0000000a;
+            &:focus {
+                outline: none;
+                box-shadow: 0px 0px 0px 1px #0f9cd8ab, 1px 1px 4px 0px #0000000a;
+            }
+        }
+    }
+    &_submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        &-button {
+            color: white;
+            background: $gradiant-radial;
+            height: max-content;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 8px 32px;
+            font-size: 18px;
+            border: none;
+            &:hover {
+                background: $gradiant-radialhover;
+            }
+        }
+    }
+}

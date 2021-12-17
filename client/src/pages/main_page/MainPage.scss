@@ -1,0 +1,67 @@
+@import '../../Colors';
+
+.mainpage {
+    border: 4px solid white;
+    background: $color-bg;
+    border-radius: 12px;
+    box-shadow: 0 0 34px 4px #0e429c42;
+
+    &-searchbar {
+        background: white;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+
+        &-sort {
+            transform: translate(-4px, -2px);
+            outline: none !important;
+            select {
+                border: 1px solid $color-light;
+                padding: 6px;
+                border-radius: 8px;
+                color: #616a72;
+                font-size: 14px;
+
+                &:focus {
+                    border: 1px solid $color-main;
+                    color: $color-main !important;
+                }
+            }
+        }
+
+        input {
+            border: none;
+            border-radius: 8px;
+            background-color: $color-bg;
+            min-width: 246px;
+            max-width: 520px;
+            width: 33%;
+            height: 34px;
+            font-size: 18px;
+            padding: 0 8px;
+
+            
+            &:focus {
+                outline: none;
+                color: #1672cf;
+            }
+        }
+
+        label {
+            color: #616a72;
+            font-size: 16px;
+        }
+
+    }
+
+    &-content {
+        padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}

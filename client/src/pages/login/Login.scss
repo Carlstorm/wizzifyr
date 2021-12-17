@@ -1,0 +1,71 @@
+@import '../../Colors';
+
+.login {
+    &-container {
+        position: relative;
+        background: white;
+        transform: translateX(-50%);
+        left: 50%;
+        border-radius: 12px;
+        padding: 32px 24px;
+        max-width: 424px;
+        box-shadow: 0 0 34px 4px #0e429c42;
+    }
+
+    &-heading {
+        margin: 0 0 18px 0;
+        color: $color-main;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    &-errorList {
+        color: #e35050;
+        margin: 0 0 0 24px;
+        display: list-item;
+        font-size: 14px;
+    }
+
+    &-input {
+        width: calc(100% - 24px);
+        border: none;
+        height: 20px;
+        border-radius: 8px;
+        color: $color-main;
+        background: $color-bg;
+        padding: 8px 12px;
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 0px 1px #0f9cd8ab, 1px 1px 4px 0px #0000000a;
+        }
+    }
+
+    &-submit {
+        margin-top: 32px;
+        width: 84px;
+        height: 28px;
+        color: white;
+        padding: 0 0 1px 0;
+        background: $gradiant-radial;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        &:hover {
+            background: $gradiant-radialhover;
+            cursor: pointer;
+        }
+    }
+
+    &-register {
+        color: $color-main;
+        top: 0;
+        margin: 0 12px;
+        position: relative;
+        text-decoration: none;
+        opacity: 0.75;
+        &:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+    }    
+}

@@ -1,0 +1,63 @@
+@import '../Colors';
+
+.nav {
+    height: 64px;
+    width: 100%;
+
+    &-wrap {
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    &-logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        font-style: italic;
+        transform: translateY(-4px);
+    }
+    
+    &_content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 24px;
+
+        &>div {
+            display: flex;
+            flex-direction: row;
+            &>a {
+                margin-left: 8px !important;
+            }
+        }
+
+        &-button {
+            color: white;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-decoration: none;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.9;
+            p {
+                position: relative;
+                margin: 0;
+                top: -1px;
+                font-size: 14px;
+                padding: 4px 12px;
+            }
+            &:hover {
+                opacity: 1;
+                background: rgba(255, 255, 255, 0.11);
+            }
+        }
+    }
+}

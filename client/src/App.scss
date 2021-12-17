@@ -1,0 +1,36 @@
+@import './Colors';
+
+#root {
+    height: 100vh;
+
+    font-family: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", 
+    "Ubuntu", "Cantarell", "Fira Sans", 
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.maincontent {
+    position: relative;
+    width: 80%;
+    min-height: calc(100% - 192px);
+    max-width: 1000px;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 64px 0;
+}
+
+.Loading {
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.prop-heading {
+    color: $color-light;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    margin: 24px 0 8px 4px !important;
+}

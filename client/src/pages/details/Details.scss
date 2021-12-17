@@ -1,0 +1,183 @@
+@import '../../Colors';
+
+.details {
+    background: $color-bg;
+    border-radius: 12px;
+    border: solid 4px white;
+    box-shadow: 0 0 34px 4px #0e429c42;
+
+    &_content {
+        width: calc(100% - 48px);
+        background: white;
+        padding: 24px 24px 32px 24px;
+        box-shadow: 1px 1px 3px 0px #0000000a;
+
+        &-main {
+            display: flex;
+            width: 100%;
+        }
+
+        &-image {
+            height: 164px;
+            min-width: 164px;
+            border-radius: 8px;
+            background-size: cover !important;
+            background-position: center !important;
+            background: url('../../Assets/Images/presentPlaceholder.png');
+        }
+
+        &-info {
+            margin: 0;
+            flex-grow: 1;
+            position: relative;
+            padding: 24px 24px 0 24px;
+
+            h1 {
+                margin: 0;
+                text-transform: capitalize;
+                color: $color-main;
+            }
+
+            &>p {
+                margin: 0 0 8px 0;
+                color: $color-light;
+                font-style: italic;
+            }
+        }
+
+        &-links {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 4px 0;
+            font-size: 14px;
+
+            &-link {
+                padding-right: 24px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                color: $color-light;
+                text-decoration: none;
+
+                p {
+                    transform: translateY(-5px);
+                    margin: 0;
+                    pointer-events: none;
+                }
+    
+                & svg {
+                    height: 12px;
+                    margin: 0 4px 0 0;
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $color-main;
+                }
+            }
+        }
+
+        &-details {
+            margin-top: 16px;
+            border-top: 1px solid $color-main;
+            padding: 8px;
+            color: $color-light;
+            font-style: italic;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    &_comments {
+        width: calc(100% - 48px);
+        padding: 32px 24px;
+        position: relative;
+
+        &--error {
+            color: red;
+            position: absolute;
+            margin: 0;
+            font-size: 14px;
+            transform: translateY(-24px);
+        }
+
+        &-makecomment {
+            width: 100%;
+            textarea {
+                resize: none;
+                width: calc(100% - 16px);
+                height: 124px;
+                padding: 8px;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 1px 1px 3px 0px #0000000a;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0px 0px 0px 1px #0f9cd8ab, 1px 1px 4px 0px #0000000a;
+                }
+            }
+
+            &-disabled {
+                pointer-events: none;
+                textarea {
+                    opacity: 0.5;
+                }
+                &>input {
+                    opacity: 0.3;
+                    background: grey;
+                }
+            }
+        }
+
+        &-loginmessage {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 96px;
+            z-index: 99;
+            font-size: 18px;
+            font-style: italic;
+            color: $color-light;
+
+            &>p {
+                margin: 12px;
+            }
+            &>div {
+                position: relative;
+                transform: translateX(-50%);
+                left: 50%;
+                border-radius: 8px;
+                background: $gradiant-radial;
+                width: max-content;
+                cursor: pointer;
+                &:hover {
+                    background: $gradiant-radialhover;  
+                }
+                &>p{
+                    margin: 0;
+                    color: white;
+                    padding: 2px 24px 6px 24px;
+                }
+            }
+        }
+
+        &-button {
+            background: $gradiant-radial;
+            border: none;
+            border-radius: 4px;
+            width: max-content;
+            margin: 8px 0px;
+            color: white;
+            padding: 6px 16px;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover {
+                background: $gradiant-radialhover;
+            }
+        }
+    }
+}

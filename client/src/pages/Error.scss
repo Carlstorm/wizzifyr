@@ -1,0 +1,18 @@
+@import '../Colors';
+
+.error {
+    position: relative;
+    background: white;
+    transform: translateX(-50%);
+    left: 50%;
+    border-radius: 12px;
+    padding: 32px 24px;
+    max-width: 424px;
+    box-shadow: 0 0 34px 4px #0e429c42;
+
+    p {
+        text-align: center;
+        font-size: 32px;
+        color: $color-light;
+    }
+}
